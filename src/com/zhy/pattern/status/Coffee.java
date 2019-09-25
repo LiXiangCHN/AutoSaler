@@ -28,7 +28,7 @@ public class Coffee implements Juice{
 public void JuiceSelect() {
 	// TODO Auto-generated method stub
 	
-	System.out.println("你选择了咖啡");
+	System.out.println("你选择了咖啡------------");
 	//juiceone = new VendingMachine(Colanum,"Cola");
 	//return juiceone;
 	

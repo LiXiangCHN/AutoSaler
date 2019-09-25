@@ -34,7 +34,7 @@ public class Cola implements Juice{
 	public void JuiceSelect() {
 		// TODO Auto-generated method stub
 		
-		System.out.println("你选择了橙汁");
+		System.out.println("你选择了可乐-------");
 		//juiceone = new VendingMachine(Colanum,"Cola");
 		//return juiceone;
 		

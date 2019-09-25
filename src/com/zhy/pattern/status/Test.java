@@ -34,35 +34,31 @@ public class Test
         Juice juice= jmanager.factory(juicetype);
 
 		VendingMachine machine=new VendingMachine(5,juicetype);
-		System.out.println("您选择的饮料是"+ juicetype+"-------");
-		machine.insertMoney();
-		machine.backMoney();
-  
+//		System.out.println("您选择的饮料是"+ juicetype+"-------");
+		machine.insertMoney(); //投币
+		machine.backMoney();  //退钱
         System.out.println("我要抽奖----------");
-  
-        machine.insertMoney();
-        machine.turnCrank();
-        machine.insertMoney();
-        machine.turnCrank();
-        machine.insertMoney();
-        machine.turnCrank();
-        machine.insertMoney();
-        machine.turnCrank();
-        machine.insertMoney();
-        machine.turnCrank();
-        machine.insertMoney();
-        machine.turnCrank();
-        machine.insertMoney();
-        machine.turnCrank();
-  
+        machine.insertMoney(); //投币
+        machine.turnCrank();   //转动手柄
+        machine.insertMoney(); //投币
+        machine.turnCrank();   //转动手柄
+        machine.insertMoney(); //投币
+        machine.turnCrank();   //转动手柄
+        machine.insertMoney(); //投币
+        machine.turnCrank();   //转动手柄
+        machine.insertMoney(); //投币
+        machine.turnCrank();   //转动手柄
+        machine.insertMoney(); //投币
+        machine.turnCrank();   //转动手柄
+        machine.insertMoney(); //投币
+        machine.turnCrank();   //转动手柄
         System.out.println("测试---------");
-  
-        machine.insertMoney();
-        machine.backMoney();
-        machine.backMoney();
-        machine.turnCrank();// 无效操作
-        machine.turnCrank();// 无效操作
-        machine.backMoney();
+        machine.insertMoney(); //投币
+        machine.backMoney();   //退钱
+        machine.backMoney();   //退钱
+        machine.turnCrank();   //转动手柄
+        machine.turnCrank();   //转动手柄
+        machine.backMoney();   //退钱
        
        
 	}
