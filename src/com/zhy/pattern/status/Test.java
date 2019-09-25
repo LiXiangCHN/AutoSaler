@@ -1,53 +1,68 @@
 package com.zhy.pattern.status;
 
-  
 
-public class Test  
+import java.util.Scanner;
+
+public class Test
 {  
-	//public static VendingMachine machine1; 
-	public static void main(String[] args)  
-    {  
-      JuiceMethod("Cola");
-      JuiceMethod("Tea");
-      JuiceMethod("Coffee");
-      JuiceMethod("abc");
+	//public static VendingMachine machine;
+	public static void main(String[] args)
+    {
+        while(true) {
+            System.out.println("1.选择可乐------2.选择茶-------3.选择咖啡");
+            Scanner input = new Scanner(System.in);
+            switch (input.nextLine()) {
+                case "1":
+                    JuiceMethod("Cola");
+                    break;
+                case "2":
+                    JuiceMethod("Tea");
+                    break;
+                case "3":
+                    JuiceMethod("Coffee");
+                    break;
+
+            }
+        }
+
           
   
     }  
 	
 	public static void JuiceMethod(String juicetype) {
-		
-		Juicenum content=JuiceManger.factory(juicetype).Jav();
-		VendingMachine machine1=new VendingMachine(content.num,content.Juicenumname);
-		System.out.println("您选择的饮料是"+ content.Juicenumname+"-------");
-		machine1.insertMoney();  
-		machine1.backMoney();  
+        JuiceManager jmanager =new JuiceManager();
+        Juice juice= jmanager.factory(juicetype);
+
+		VendingMachine machine=new VendingMachine(5,juicetype);
+		System.out.println("您选择的饮料是"+ juicetype+"-------");
+		machine.insertMoney();
+		machine.backMoney();
   
-        System.out.println("我要中奖");
+        System.out.println("我要抽奖----------");
   
-        machine1.insertMoney(); 
-        machine1.turnCrank();  
-        machine1.insertMoney();  
-        machine1.turnCrank();  
-        machine1.insertMoney();  
-        machine1.turnCrank();  
-        machine1.insertMoney();  
-        machine1.turnCrank();  
-        machine1.insertMoney();  
-        machine1.turnCrank();  
-        machine1.insertMoney();  
-        machine1.turnCrank();  
-        machine1.insertMoney();  
-        machine1.turnCrank();  
+        machine.insertMoney();
+        machine.turnCrank();
+        machine.insertMoney();
+        machine.turnCrank();
+        machine.insertMoney();
+        machine.turnCrank();
+        machine.insertMoney();
+        machine.turnCrank();
+        machine.insertMoney();
+        machine.turnCrank();
+        machine.insertMoney();
+        machine.turnCrank();
+        machine.insertMoney();
+        machine.turnCrank();
   
-        System.out.println("压力测试");
+        System.out.println("测试---------");
   
-        machine1.insertMoney();  
-        machine1.backMoney();  
-        machine1.backMoney();  
-        machine1.turnCrank();// 无效操作
-        machine1.turnCrank();// 无效操作
-        machine1.backMoney(); 
+        machine.insertMoney();
+        machine.backMoney();
+        machine.backMoney();
+        machine.turnCrank();// 无效操作
+        machine.turnCrank();// 无效操作
+        machine.backMoney();
        
        
 	}

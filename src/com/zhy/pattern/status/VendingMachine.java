@@ -8,8 +8,8 @@ package com.zhy.pattern.status;
  */  
 public class VendingMachine  
 {  
-    public static int Juicenum;
-    public static String Juicename;
+//    public static int Juicenum;
+//    public static String Juicename;
 	private State noMoneyState;  
     private State hasMoneyState;  
     private State soldState;  
@@ -61,17 +61,17 @@ public class VendingMachine
             count -= 1;  
         }  
         
-        switch(name) {
-        case "Cola":
-        	Cola.Colanum=count;
-        	break;
-        case "Tea":
-        	Tea.Teanum=count;
-        	break;
-        case "Coffee":
-        	Coffee.Coffeenum=count;
-        	break;
-        }
+//        switch(name) {
+//        case "Cola":
+//        	Cola.Colanum=count;
+//        	break;
+//        case "Tea":
+//        	Tea.Teanum=count;
+//        	break;
+//        case "Coffee":
+//        	Coffee.coff=count;
+//        	break;
+//        }
     }  
   
     public void setState(State state)  
